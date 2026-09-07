@@ -12,21 +12,30 @@ HTML
         header { background: #1a365d; color: white; text-align: center; padding: 40px 20px; }
         header h1 { font-size: 2.2rem; margin-bottom: 10px; }
         
-        nav { background: #2b6cb0; text-align: center; padding: 15px; sticky; top: 0; }
+        nav { background: #2b6cb0; text-align: center; padding: 15px; position: sticky; top: 0; z-index: 100; }
         nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
 
         .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
         
         .section-title { font-size: 1.8rem; border-bottom: 3px solid #2b6cb0; padding-bottom: 10px; margin-bottom: 25px; color: #1a365d; }
         
+        .badge { display: inline-block; background: #e53e3e; color: white; padding: 5px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; margin-bottom: 10px; }
+        .about-text { font-size: 1.1rem; word-break: keep-all; line-height: 1.8; }
+        
+        .info-box { background: #f7fafc; border: 1px solid #e2e8f0; border-left: 5px solid #2b6cb0; padding: 20px; margin-top: 20px; border-radius: 4px; }
+        .info-box ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 10px; }
+        .info-box li { font-weight: bold; color: #2d3748; }
+
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px; }
         .card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); background: white; }
         .card img { width: 100%; height: 230px; object-fit: cover; display: block; }
         .card-body { padding: 15px; }
         .card-title { font-size: 1.2rem; font-weight: bold; margin-bottom: 8px; color: #2d3748; }
 
-        .contact-box { background: #edf2f7; padding: 25px; border-radius: 8px; text-align: center; margin-top: 30px; }
-        .btn-call { display: inline-block; background: #e53e3e; color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 15px; font-size: 1.1rem; }
+        .contact-box { background: #edf2f7; padding: 30px 20px; border-radius: 8px; text-align: center; margin-top: 30px; }
+        .btn-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+        .btn-call { display: inline-block; background: #e53e3e; color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
+        .btn-sub { background: #2b6cb0; }
 
         footer { background: #2d3748; color: #a0aec0; text-align: center; padding: 20px; margin-top: 50px; font-size: 0.9rem; }
     </style>
@@ -35,12 +44,12 @@ HTML
 
     <header>
         <h1>경남이벤트</h1>
-        <p>몽골텐트 · 캐노피천막 · 의자 · 탁자 · 무대 렌탈 전문</p>
+        <p>부산 · 경남 · 경북 지역 행사용품 대여 및 설치 전문</p>
     </header>
 
     <nav>
         <a href="#about">회사소개</a>
-        <a href="#items">주요 품목</a>
+        <a href="#items">보유 품목</a>
         <a href="#process">시공 사례</a>
         <a href="#contact">문의하기</a>
     </nav>
@@ -48,8 +57,22 @@ HTML
     <div class="container">
         
         <section id="about" style="margin-bottom: 50px;">
+            <span class="badge">20년 전통 행사 전문</span>
             <h2 class="section-title">회사 소개</h2>
-            <p>경남이벤트는 축제, 체육대회, 관공서 행사, 기업행사 등 다양한 야외 및 실내 행사에 필요한 전문 용품을 대여 및 설치해 드리는 행사 전문 업체입니다. 안전하고 완벽한 세팅을 약속드립니다.</p>
+            <p class="about-text">
+                경남이벤트는 <strong>20년이 넘는 풍부한 경험과 노하우</strong>를 가진 행사용품 렌탈·설치 전문 업체입니다.<br>
+                <strong>부산, 경남, 경북 전 지역</strong> 축제, 체육대회, 관공서 행사, 기업행사 등 수많은 현장에 안전하고 완벽한 시공을 제공해 드립니다.
+            </p>
+            
+            <div class="info-box">
+                <h3>📦 대량 보유 품목 현황</h3>
+                <ul>
+                    <li>✔ 몽골텐트 : 50개</li>
+                    <li>✔ 캐노피천막 : 300개</li>
+                    <li>✔ 테이블 : 700개</li>
+                    <li>✔ 의자 : 5,000개</li>
+                </ul>
+            </div>
         </section>
 
         <section id="items">
@@ -59,21 +82,21 @@ HTML
                     <img src="event1.jpg.jfif" alt="몽골텐트">
                     <div class="card-body">
                         <div class="card-title">몽골텐트 (5x5)</div>
-                        <p>대형 행사, 먹거리 부스, 전시용 최고급 텐트</p>
+                        <p>대형 축제, 먹거리 부스, 고급 행사용 텐트 (50개 보유)</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="event3.jpg.jfif" alt="캐노피천막">
                     <div class="card-body">
                         <div class="card-title">캐노피 천막</div>
-                        <p>소규모 부스, 체육대회, 간단한 야외 행사용</p>
+                        <p>체육대회, 소규모 부스, 야외 행사용 (300개 보유)</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="event4.jpg.jfif" alt="의자 및 무대">
                     <div class="card-body">
                         <div class="card-title">의자 / 테이블 / 무대</div>
-                        <p>플라스틱 의자, 오리목 탁자, 야외 무대 세팅</p>
+                        <p>플라스틱 의자(5천개), 오리목 탁자(7백개) 및 야외 무대</p>
                     </div>
                 </div>
             </div>
@@ -105,9 +128,12 @@ HTML
 
         <section id="contact">
             <div class="contact-box">
-                <h2>행사 용품 대여 문의</h2>
-                <p style="margin-top: 10px;">견적 및 상담 문의는 언제든 연락주세요!</p>
-                <a href="tel:010-0000-0000" class="btn-call">📞 전화 연결하기</a>
+                <h2>행사 용품 대여 및 견적 문의</h2>
+                <p style="margin-top: 10px; color: #4a5568;">부산 · 경남 · 경북 전 지역 빠른 견적 및 상담이 가능합니다.</p>
+                <div class="btn-group">
+                    <a href="tel:010-7185-0019" class="btn-call">📞 대표 문의 : 010-7185-0019</a>
+                    <a href="tel:010-4993-9906" class="btn-call btn-sub">📞 직통 문의 : 010-4993-9906</a>
+                </div>
             </div>
         </section>
 
